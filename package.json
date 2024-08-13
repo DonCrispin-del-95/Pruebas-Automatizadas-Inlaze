@@ -1,0 +1,23 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "E2E Framework testing cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cy:open": "cypress open"
+  },
+  "keywords": [
+    "E2E",
+    "framework",
+    "testing",
+    "cypress",
+    "javascript"
+  ],
+  "author": "Andres Guzman",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}

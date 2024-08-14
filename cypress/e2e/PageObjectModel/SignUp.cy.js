@@ -1,102 +1,104 @@
 import SignUp_LogIn from "../../pages/SignUp_LogIn"
 
-const home = new SignUp_LogIn
+const signup = new SignUp_LogIn
 
 describe('Ejemeplo de POM en la web de Free Range Testers', () => {
-//completo
+
     it('Se debe encontrar el boton de sign up(registro) y ser clickeable', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.VerificarNombres()
-        home.VerificarEmail()
-        home.VerificarContraseña()
-        home.BotonParaCrearUsuarioI()
-        
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.VerificarNombres()
+        signup.VerificarEmail()
+        signup.VerificarContraseña()
+        signup.BotonParaCrearUsuarioI()
+
 
     })
-//completo
+
     it('El formulario debe permitir registrar un usuario con nombre, email y una contraseña.', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.NombresUsuario()
-        home.Email()
-        home.ContraseñaUsuarioV()
-        home.ConfContraUsuarioV()
-        home.BotonParaCrearUsuarioA()
-        home.RegistroExitoso()
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.NombresUsuario()
+        signup.Email()
+        signup.ContraseñaUsuarioV()
+        signup.ConfContraUsuarioV()
+        signup.BotonParaCrearUsuarioA()
+        signup.RegistroExitoso()
 
 
 
     })
-//completo(Bug permite poner cualquier cosa y l oadmite como correo)
+
     it('El email debe cumplir con el estándar de una dirección de correo electrónico.', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.NombresUsuario()
-        home.EmailIncorrecto()
-        home.Contraseña()
-        home.ConfirmarContraseña()
-        home.BotonParaCrearUsuarioA()
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.NombresUsuario()
+        signup.EmailIncorrecto()
+        signup.Contraseña()
+        signup.ConfirmarContraseña()
+        signup.BotonParaCrearUsuarioA()
 
     })
-//completo(crea el usuario con los mismos correos y sobreescribe uno de los usuarios)
+
     it('El email debe cumplir con el estándar de una dirección de correo electrónico y ser único en la base de datos.', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.NombresUsuario()
-        home.Email()
-        home.Contraseña()
-        home.ConfirmarContraseña()
-        home.BotonParaCrearUsuarioA()
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.NombresUsuario()
+        signup.Email()
+        signup.Contraseña()
+        signup.ConfirmarContraseña()
+        signup.BotonParaCrearUsuarioA()
 
     })
-//falta una validación de la contraseña
+
     it('La contraseña debe cumplir con los requerimientos para ser valida', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.NombresUsuario()
-        home.Email()
-        home.Contraseña()
-        home.ConfirmarContraseña()
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.NombresUsuario()
+        signup.Email()
+        signup.Contraseña()
+        signup.ConfirmarContraseña()
+        signup.BotonParaCrearUsuarioA()
 
 
 
     })
-//este si esta completo 
+
     it('Comprobar que el formulario no se envíe si los campos obligatorios no están completos.', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.Nombre()
-        home.Email()
-        home.ContraseñaUsuarioV()
-        home.ConfirmarContraseña()
-        home.BotonParaCrearUsuarioI()
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.Nombre()
+        signup.Email()
+        signup.ContraseñaUsuarioV()
+        signup.ConfirmarContraseña()
+        signup.BotonParaCrearUsuarioI()
 
     })
-    //incompleto comparacion de contraseñas
-    it('Comprobar que el formulario no se envíe si los campos obligatorios no están completos.', () => {
 
-        home.navigateHome()
-        home.BotonFormularioUsuario()
-        home.clickBotonCrearUsuario()
-        home.Nombre()
-        home.Email()
-        home.ContraseñaUsuarioV()
-        home.ConfirmarContraseña()
-        home.CompararContraseñas()
-       
+    it('Comprobar que el sistema informe si las contraseñas ingresadas no coinciden.', () => {
+
+        signup.navigateHome()
+        signup.BotonFormularioUsuario()
+        signup.clickBotonCrearUsuario()
+        signup.Nombre()
+        signup.Email()
+        signup.ContraseñaUsuarioV()
+        signup.ConfirmarContraseña()
+        signup.CompararContraseñas()
+        
+
 
     })
 })

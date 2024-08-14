@@ -1,7 +1,7 @@
 
 class SignUp_LogIn {
 
-    
+
     BotonFormularioUsuario() {
         return cy.get('.text-center > .font-bold')
     }
@@ -30,32 +30,32 @@ class SignUp_LogIn {
         cy.get('.join > #confirm-password').type("Valde10.*")
     }
     TextoInicioSesión() {
-        cy.get('.text-4xl').should('have.text','Sign in')
+        cy.get('.text-4xl').should('have.text', 'Sign in')
     }
 
     RegistroExitoso() {
-        cy.get('.ml-3').should('have.text','Successful registration!')
+        cy.get('.ml-3').should('have.text', 'Successful registration!')
     }
     clickBotonCrearUsuario() {
         this.BotonFormularioUsuario().click()
     }
-    ClickImagen(){
+    ClickImagen() {
         cy.get('img').click()
     }
-    CerrarSesion(){
+    CerrarSesion() {
         cy.contains('Logout').click()
     }
 
     VerificaNombreDeUsuario() {
-        cy.get('.flex > .font-bold').should('have.text','Carlos Valderrama')
+        cy.get('.flex > .font-bold').should('have.text', 'Carlos Valderrama')
     }
-    EmailInexistente(){
+    EmailInexistente() {
         cy.get('#email').type("arcticMonkeys@hotmail.com")
-
+        
     }
 
-    UsuarioNoEncontrado(){
-        cy.get('.ml-3').should('have.text','User not found')
+    UsuarioNoEncontrado() {
+        cy.get('.ml-3').should('have.text', 'User not found')
     }
     VerificarNombres() {
         cy.get('#full-name').should('exist')
@@ -80,8 +80,8 @@ class SignUp_LogIn {
         cy.get('[type="submit"]').should('be.enabled')
         cy.get('[type="submit"]').click()
     }
-    CompararContraseñas(){
-        cy.get('[errors=""]').should('have.text',' Passwords do not match ')
+    CompararContraseñas() {
+        cy.get('[errors=""]').should('have.text', ' Passwords do not match ')
     }
 
     //Navegacion

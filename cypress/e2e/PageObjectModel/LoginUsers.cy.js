@@ -24,10 +24,10 @@ describe('Ejecutar las pruebas respecto al login', () => {
         login.Contraseña()
         login.BotonParaIniciarSesionA()
         login.VerificaNombreDeUsuario()
-        
-        
 
-    })  
+
+
+    })
     it('Verificar que la plataforma permita cerrar la sesión correctamente.', () => {
         login.navigateHome()
         login.Email()
@@ -37,17 +37,17 @@ describe('Ejecutar las pruebas respecto al login', () => {
         login.ClickImagen()
         login.CerrarSesion()
         login.TextoInicioSesión()
-        
 
-    })  
+
+    })
     it('Iniciar Sesión con un correo inexistente en la base de datos', () => {
         login.navigateHome()
         login.EmailInexistente()
         login.Contraseña()
         login.BotonParaIniciarSesionA()
         login.UsuarioNoEncontrado()
-        
+
         
 
-    })  
+    })
 })
